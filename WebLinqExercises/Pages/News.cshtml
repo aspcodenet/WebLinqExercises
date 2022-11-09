@@ -1,0 +1,14 @@
+﻿@page
+@using System.Security.Cryptography
+@model WebLinqExercises.Pages.NewsModel
+@{
+}
+
+
+
+@foreach (var news in Model.KrisInfoLista)
+{
+    <h2>@news.Title</h2>
+    <p>@news.Text</p>
+    <img src="@news.ImageUrl"/>
+}

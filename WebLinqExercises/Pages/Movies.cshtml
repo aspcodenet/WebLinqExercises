@@ -7,6 +7,7 @@
 
 
 
+
 <table class="table">
     <tr>
         <th>Title</th>
@@ -69,8 +70,10 @@
         <tr>
 
             <td>
-                <a href="/Movie?id=@m.Id">@m.Title</a>
-                
+                <a   href="/Movie?id=@m.Id">@m.Title</a>
+
+@*                <a   Page="/Movie" asp.route-id="@m.Id">@m.Title</a>
+*@
             </td>
             <td>@m.ReleaseYear</td>
             <td>@m.Director</td>
