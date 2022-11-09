@@ -1,0 +1,80 @@
+﻿@page
+@model WebLinqExercises.Pages.MoviesModel
+@{
+}
+
+
+
+
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Release year</th>
+        <th>Director</th>
+    </tr>
+    @foreach (var m in Model.Movies)
+    {
+        <tr>
+            <td>@m.Title</td>
+            <td>@m.ReleaseYear</td>
+            <td>@m.Director</td>
+        </tr>
+
+    }
+</table>
+
+
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Release year</th>
+        <th>Director</th>
+    </tr>
+    @foreach (var m in Model.Movies)
+    {
+        <tr>
+
+            <td>
+                @if (m.Title.ToLower().Contains("a"))
+                {
+                    <b>@m.Title</b>
+                }
+                else
+                {
+                    @m.Title
+                }
+                
+            </td>
+            <td>@m.ReleaseYear</td>
+            <td>@m.Director</td>
+        </tr>
+
+    }
+</table>
+
+
+
+
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Release year</th>
+        <th>Director</th>
+    </tr>
+    @foreach (var m in Model.Movies)
+    {
+        <tr>
+
+            <td>
+                <a href="/Movie?id=@m.Id">@m.Title</a>
+                
+            </td>
+            <td>@m.ReleaseYear</td>
+            <td>@m.Director</td>
+        </tr>
+
+    }
+</table>

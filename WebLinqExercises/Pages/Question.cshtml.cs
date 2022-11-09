@@ -15,6 +15,9 @@ namespace WebLinqExercises.Pages
 
         public void OnGet(string id)
         {
+            var b = Convert.ToInt32(true);
+            var b2 = Convert.ToInt32(false);
+
             if (id == "1")
             {
                 ViewData["data"] = Data.Repository.GetAllMovies().ToHtmlTable();

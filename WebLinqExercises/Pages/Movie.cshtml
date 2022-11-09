@@ -1,0 +1,36 @@
+﻿@page
+@model WebLinqExercises.Pages.MovieModel
+@{
+}
+
+
+
+<h1>@Model.Movie.Title</h1>
+<ul>
+    <li>
+        Director: @Model.Movie.Director
+    </li>
+    <li>
+        Release year: @Model.Movie.ReleaseYear
+    </li>
+</ul>
+
+
+<h2>Actors</h2>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    @foreach (var a in Model.Movie.Actors)
+    {
+        <tr>
+
+            <td>
+                @a.Name
+            </td>
+            <td>@(DateTime.Now.Year - @a.Birthyear)</td>
+        </tr>
+
+    }
+</table>
